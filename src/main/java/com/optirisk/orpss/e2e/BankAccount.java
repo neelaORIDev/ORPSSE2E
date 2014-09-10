@@ -4,7 +4,7 @@ public class BankAccount {
 
 	private String actHolderName = null;
 	private long actNumber = 0L;
-	private double actBalance = 0;
+	private float actBalance = 0;
 	
 	public BankAccount(String actHolderName, long actNumber){
 		this.actBalance = 0;
@@ -12,24 +12,26 @@ public class BankAccount {
 		this.actNumber = actNumber;
 	}
 	
-	public void creditAmount(double inAmount){
+	public String creditAmount(float inAmount){
 		this.actBalance += inAmount;
 		System.out.println("Amount "+inAmount+" has been added to your main balance;"
 				+ " Current Account Balance is "+this.actBalance);
+		
+		return "Amount Credited";
 	}
 	
-	public void debitAmount(double inAmount){
+	public String debitAmount(float inAmount){
 		
 		if(inAmount > this.actBalance){
 			
 			System.out.println("In-sufficient Balance");
-			return;
+			return "Insufficient Balance";
 		}
 		
 		System.out.println("Your Current Balance: "+this.actBalance);
 		this.actBalance -= inAmount;
 		System.out.println("Your Current Balance After Debited Amount "+inAmount+" : "+this.actBalance);
-		
+		return "Amount Debited";
 	}
 
 	/**
@@ -63,14 +65,14 @@ public class BankAccount {
 	/**
 	 * @return the actBalance
 	 */
-	public double getActBalance() {
+	public float getActBalance() {
 		return actBalance;
 	}
 
 	/**
 	 * @param actBalance the actBalance to set
 	 */
-	public void setActBalance(double actBalance) {
+	public void setActBalance(float actBalance) {
 		this.actBalance = actBalance;
 	}
 
