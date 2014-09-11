@@ -9,10 +9,18 @@ import com.optirisk.orpss.e2e.BankAccount;
 public class BankAccountTest {
 
    @Test
-   public void testAdd() {
+   public void addCreditTest() {
 	   
 	  BankAccount myAccount = new BankAccount("Neelakandan",1234567890);  	  
 	  
       assertEquals("Amount Credited",myAccount.creditAmount(1000));
+   }
+   
+   @Test
+   public void debitCreditTest() {
+	   
+	  BankAccount myAccount = new BankAccount("Neelakandan",1234567890);  	  
+	  
+      assertEquals("Amount Debited",myAccount.debitAmount(500));
    }
 }
