@@ -21,6 +21,6 @@ public class BankAccountTest {
 	   
 	  BankAccount myAccount = new BankAccount("Neelakandan",1234567890);  	  
 	  
-      assertEquals("Amount Debited",myAccount.debitAmount(500));
+      assertEquals("Insufficient Balance",myAccount.debitAmount(500));
    }
 }
