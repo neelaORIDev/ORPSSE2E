@@ -2,6 +2,12 @@ package com.optirisk.orpss.test;
 
 import static org.junit.Assert.assertEquals;
 
+/////////////////////////////////////////////
+//
+// BankAccountTest Class
+//
+////////////////////////////////////////////
+
 import org.junit.Test;
 
 import com.optirisk.orpss.e2e.BankAccount;
